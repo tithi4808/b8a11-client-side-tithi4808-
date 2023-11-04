@@ -30,13 +30,19 @@ const Register = () => {
             return;
         }
         
-         if(!/[A-Z]/.test(password))
+         if(!/(?=.*[A-Z])/ .test(password))
         {
             seterrormg('Password should contain at least one Capital letter')
             toast(errormsg)
             return;
         }
-         if(!/[ -\/:-@\[-\`{-~]/.test(password))
+        if(!/(?=.*[0-9])/  .test(password))
+        {
+            seterrormg('Password should contain at least one numeric character')
+            toast(errormsg)
+            return;
+        }
+         if(!/[ -/:-@[-`{-~]/ .test(password))
         {
             seterrormg('Password should contain at least one Special Character')
             toast(errormsg)
