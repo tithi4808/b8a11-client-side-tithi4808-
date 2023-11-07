@@ -1,8 +1,17 @@
 import React from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const Allblog = ({blog}) => {
+    const navigate=useNavigate()
 
-    const {title,image,short_description,category,published_date}=blog
+    const {_id,title,image,short_description,category,published_date}=blog
+
+    const handledetails=id=>{
+
+           
+        navigate(`/blogdetails/${id}`)
+       
+}
     return (
         <div className='border-2 rounded-lg flex gap-6 px-4 py-8'>
 
@@ -14,7 +23,7 @@ const Allblog = ({blog}) => {
             <p className='mb-2'><span className='font-bold '>Description</span>: {short_description}</p>
             <p className='mb-2'><span className='font-bold '>Catagory</span>: {category}</p>
             <p className='mb-2'><span className='font-bold '>Published date</span>: {published_date}</p>
-            <button className='btn mr-4 mt-2 bg-blue-400 text-white'>Details</button>
+            <button onClick={()=>handledetails(_id)} className='btn mr-4 mt-2 bg-blue-400 text-white'>Details</button>
             <button className='btn bg-red-400 text-white'>Wishlist</button>
         </div>
         

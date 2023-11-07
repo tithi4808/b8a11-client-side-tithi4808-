@@ -40,8 +40,10 @@ const router = createBrowserRouter([
           element:<Addblog></Addblog>
       },
       {
-        path:'/updateblog',
-        element:<Updateblog></Updateblog>
+        path:'/update/:id',
+        element:<Updateblog></Updateblog>,
+        loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`)
+
     },
     {
       path:'/featured',
