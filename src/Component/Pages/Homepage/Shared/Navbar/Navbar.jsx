@@ -19,11 +19,11 @@ const Navbar = () => {
     const links=<>
 
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>Add Blogs</Link></li>
+        <li><Link to='/addblog'>Add Blogs</Link></li>
         <li><Link to='/allblogs'>All blogs</Link></li>
-        <li><Link to='/'>Featured Blogs
+        <li><Link to='/featured'>Featured Blogs
 </Link></li>
-        <li><Link to='/'>Wishlist
+        <li><Link to='/wishlist'>Wishlist
 </Link></li>
     
     </>
