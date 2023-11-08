@@ -108,7 +108,7 @@ const Addblog = () =>{
                             <span className="label-text">Short Description</span>
                         </label>
                         <label  className="input-group">
-                        <textarea id="description" name="Shortdescription" rows="3" cols="200"></textarea>
+                        <textarea required id="description" name="Shortdescription" rows="3" cols="200"></textarea>
                         </label>
                     </div>
                     <div className="form-control ">
@@ -116,7 +116,7 @@ const Addblog = () =>{
                             <span className="label-text">Long Description</span>
                         </label>
                         <label className="input-group">
-                        <textarea id="description" name="LongDescription" rows="8" cols="200"></textarea>
+                        <textarea required id="description" name="LongDescription" rows="8" cols="200"></textarea>
                         </label>
                     </div>
                     

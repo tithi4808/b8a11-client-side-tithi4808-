@@ -15,8 +15,8 @@ const Allblogs = () => {
     return (
        <div>
         <Banner></Banner>
-         <div className='flex max-w-7xl gap-6 mx-auto mt-10'>
-            <div className='w-2/6 border-2 rounded-lg mt-20'>
+         <div className='lg:flex max-w-7xl gap-6 mx-auto mt-10'>
+            <div className='lg:w-2/6 border-2 rounded-lg mt-20'>
             <h2 className='pt-6 text-center text-2xl text-red-500'>Search here</h2>
                 <div className='flex justify-center mt-4' >
                     
@@ -32,19 +32,19 @@ const Allblogs = () => {
                 <h2 className='pt-6 mb-4 text-center text-2xl text-red-500'>Search by category</h2><hr />
                 <p>Fiction</p><hr />
                 <p>Non-Fiction</p><hr />
-                <p></p><hr />
-                <p></p><hr />
-                <p></p><hr />
-                <p></p><hr />
-                <p></p><hr />
-                <p></p><hr />
-                <p></p><hr />
-                <p></p><hr />
+                <p>Science-Fiction</p><hr />
+                <p>Romance</p><hr />
+                <p>Mystery</p><hr />
+                <p>Self-Help</p><hr />
+                <p>Fantasy</p><hr />
+                <p>Bio-graphy</p><hr />
+                <p>Historical</p><hr />
+                <p>Author's Hub</p><hr />
 
                 </div>
 
             </div>
-            <div className='w-3/6'>
+            <div className='lg:w-3/6'>
             <div className='mt-20'>
         <div className='text-start'>
             
@@ -57,7 +57,7 @@ const Allblogs = () => {
 
             </div>
 
-            <div className='w-1/5 '>
+            <div className='lg:w-1/5 '>
             <Recommendation></Recommendation>
             </div>
             

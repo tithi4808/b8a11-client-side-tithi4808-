@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Comments from './Comments/Comments';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Blogdetails = () => {
     const loadeddata=useLoaderData()
@@ -52,11 +53,11 @@ const Blogdetails = () => {
 
         if(loadeddata.blogowneremail == User.email)
         {
-            alert('already added')
+            toast('You can not add comment on your own blog')
         }
         else
         {
-            alert('added')
+            toast('Comment Added')
         }
     
         
@@ -84,12 +85,12 @@ const Blogdetails = () => {
 
     return (
         <div className='max-w-6xl  mx-auto mt-10'>
-            <div className='border-2  rounded-lg flex gap-6 px-4 py-8'>
+            <div className='border-2  rounded-lg lg:flex gap-6 px-4 py-8'>
 
-<div className='w-1/2 flex justify-center items-center bg-slate-200'>
+<div className='lg:w-1/2 flex justify-center items-center mb-4'>
     <img src={loadeddata.image} alt="" />
 </div>
-<div className='w-1/2'>
+<div className='text-center lg:text-start lg:w-1/2'>
     <h1 className='mb-2'><span className='font-bold '>Title</span>: {loadeddata.title}</h1>
     <p className='mb-2'><span className='font-bold '>Published date</span>: {loadeddata.published_date}</p>
     <p className='mb-2'><span className='font-bold '>Catagory</span>: {loadeddata.category}</p>
@@ -98,7 +99,7 @@ const Blogdetails = () => {
 }</p>
 <div>
     {
-       (loadeddata.blogowneremail === User.email) ? <button onClick={()=>handleclick(loadeddata._id)} className='btn'>Update</button> : <p> </p>
+       (loadeddata.blogowneremail === User.email) ? <button onClick={()=>handleclick(loadeddata._id)} className='btn bg-red-200'>Update</button> : <p> </p>
     } 
 </div>
     
@@ -138,6 +139,7 @@ const Blogdetails = () => {
 
             </form>
 </div>
+<ToastContainer/>
         </div>
     );
 };
