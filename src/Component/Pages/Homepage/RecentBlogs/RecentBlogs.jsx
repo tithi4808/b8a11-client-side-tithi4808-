@@ -4,7 +4,7 @@ import Recentblog from './Recentblog/Recentblog';
 const RecentBlogs = () => {
     const [blogs,setblogs]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/allblogs")
+        fetch("http://localhost:5000/recentblogs")
         .then(res=>res.json())
         .then(data=>setblogs(data))
     },[])
