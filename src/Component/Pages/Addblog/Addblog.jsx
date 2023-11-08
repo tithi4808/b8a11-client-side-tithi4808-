@@ -94,7 +94,7 @@ const Addblog = () =>{
                                 <option value="mystery">Mystery</option>
                                 <option value="romance">Romance</option>
                                 <option value="Fiction">Fiction</option>
-                                <option value="Kid">Kid</option>
+                                <option value="Author's Hub">Kid</option>
                                 <option value="Non-fiction">Non-fiction</option>
                                 <option value="Bio-graphy">Bio-graphy</option>
                                 <option value="Self-help">Self help</option>
