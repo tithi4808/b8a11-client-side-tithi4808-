@@ -44,7 +44,7 @@ const Updateblog = () => {
 
     
     
-    fetch(`http://localhost:5000/allblogs/${loadeddata._id}`,{
+    fetch(`https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/allblogs/${loadeddata._id}`,{
         method: "PUT",
         headers: {
             "Content-Type": "application/json",

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast,ToastContainer } from 'react-toastify';
+import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 
 const Recentblog = ({blog}) => {
     const navigate=useNavigate()
+    const {User}=useContext(AuthContext)
     
     const {_id,title,image,Shortdescription,category,published_date}=blog
 
@@ -14,8 +16,9 @@ const Recentblog = ({blog}) => {
            
     }
     const handlewish=()=>{
-        const blogs={title,image,Shortdescription,category,published_date}
-        fetch('http://localhost:5000/wishlist',{
+        const email=User.email
+        const blogs={title,image,Shortdescription,category,published_date,email}
+        fetch('https://b8a11-server-side-tithi4808-4wuh4agec-tanya-sultanas-projects.vercel.app/wishlist',{
         method: "POST",
         headers: {
             "Content-Type": "application/json",

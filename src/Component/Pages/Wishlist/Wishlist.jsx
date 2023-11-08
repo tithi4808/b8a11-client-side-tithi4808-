@@ -2,15 +2,30 @@ import {useState,useEffect} from 'react';
 import List from './List';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Wishlist = () => {
-    const blog=useLoaderData()
+     const blog=useLoaderData()
     const navigate=useNavigate()
-    console.log(blog)
-    const [blogs,setblogs]=useState(blog)
+     console.log(blog)
+    
+
+     const {User}=useContext(AuthContext)
+     const[blogs,setblogs]=useState([])
+     const url=`https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/wishlist?email=${User.email}`
+     useEffect(()=>{
+         fetch(url)
+         .then(res=>res.json())
+         .then(data=>setblogs(data))
+     },[]);
+
+    // const [newblogs,setnewblogs]=useState(blog)
+    
+
 
     const handledelete=_id=>{
-        fetch(`http://localhost:5000/wishlist/${_id}`,{
+        fetch(`https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/wishlist/${_id}`,{
             method: "DELETE"
         })
         .then(res=>res.json())

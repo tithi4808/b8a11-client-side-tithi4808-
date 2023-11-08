@@ -4,7 +4,7 @@ import Recentblog from './Recentblog/Recentblog';
 const RecentBlogs = () => {
     const [blogs,setblogs]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/recentblogs")
+        fetch("https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/recentblogs")
         .then(res=>res.json())
         .then(data=>setblogs(data))
     },[])

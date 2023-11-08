@@ -10,11 +10,11 @@ const Blogdetails = () => {
     const [comments,setcomments]=useState([])
     const navigate=useNavigate();
     
-   
+   const url=`https://b8a11-server-side-tithi4808-c7fbx0q0e-tanya-sultanas-projects.vercel.app/comment?blog_id=${loadeddata._id}`
 
     
     useEffect(()=>{
-        fetch('http://localhost:5000/comment')
+        fetch(url)
         .then(res=>res.json())
         .then(data=>{
            
@@ -31,7 +31,7 @@ const Blogdetails = () => {
     
 
 
-    const handlecomment = (event) => {
+    const handlecomment = (event,id) => {
 
         event.preventDefault();
     
@@ -41,7 +41,7 @@ const Blogdetails = () => {
         const comment_owner=User.displayName;
         const comment_owner_email=User.email;
         const image=User.photoURL;
-        const blog_id=loadeddata._id;
+        const blog_id=id;
         
         
 
@@ -64,7 +64,7 @@ const Blogdetails = () => {
     
         
         
-        fetch('http://localhost:5000/comment',{
+        fetch('https://b8a11-server-side-tithi4808-4wuh4agec-tanya-sultanas-projects.vercel.app/comment',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -116,7 +116,7 @@ const Blogdetails = () => {
 </div>
 
 <div className=' bg-blue-100  mt-20 border-2  rounded-lg '>
-<form onSubmit={handlecomment}>
+<form onSubmit={()=>handlecomment(loadeddata._id)}>
                 
                
                     

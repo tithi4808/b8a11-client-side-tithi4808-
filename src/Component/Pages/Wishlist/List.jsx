@@ -16,7 +16,7 @@ const List = ({blog}) => {
 
     }
     const handledelete=id=>{
-        fetch(`http://localhost:5000/wishlist/${id}`,{
+        fetch(`https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/wishlist/${id}`,{
             method: "DELETE"
         })
         .then(res=>res.json())

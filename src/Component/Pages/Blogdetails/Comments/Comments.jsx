@@ -13,6 +13,7 @@ const Comments = ({comment}) => {
             <div>
                 <p className='text-lg font-bold'>{blog_owner}</p>
                 
+                
             </div>
             
         </div>

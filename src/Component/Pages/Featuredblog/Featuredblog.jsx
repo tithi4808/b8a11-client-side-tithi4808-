@@ -10,7 +10,7 @@ const Featuredblog = () => {
 
     const [featureddata,setfeatureddata]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/featuredblogs')
+        fetch('https://b8a11-server-side-tithi4808-4wuh4agec-tanya-sultanas-projects.vercel.app/featuredblogs')
         .then(res=>res.json())
         .then(data=>{
             const featureblog=data.slice(0,10)

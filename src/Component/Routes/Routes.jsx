@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path:'/update/:id',
         element:<PrivateRoute><Updateblog></Updateblog></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`)
+        loader:({params})=>fetch(`https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/allblogs/${params.id}`)
 
     },
     {
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
   {
     path:'/wishlist',
     element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>,
-    loader:()=>fetch('http://localhost:5000/wishlist')
+    loader:()=>fetch('https://b8a11-server-side-tithi4808-4wuh4agec-tanya-sultanas-projects.vercel.app/wishlist')
 },
 {
   path:'/blogdetails/:id',
   element:<PrivateRoute><Blogdetails></Blogdetails></PrivateRoute>,
-  loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`)
+  loader:({params})=>fetch(`https://b8a11-server-side-tithi4808-r0k048sjd-tanya-sultanas-projects.vercel.app/allblogs/${params.id}`)
 },
 
 
