@@ -55,7 +55,7 @@ const Wishlist = () => {
 
 <div>
             {blogs.map(blog=><div key={blog._id}> <div>
-               <div className='border-2 rounded-lg flex gap-6 px-4 py-8'> 
+               <div className='border-2 rounded-lg lg:flex gap-6 px-4 py-8'> 
 
 <div>
     <img src={blog.image} alt="" />

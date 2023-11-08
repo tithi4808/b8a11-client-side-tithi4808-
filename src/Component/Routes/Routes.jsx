@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/update/:id',
-        element:<Updateblog></Updateblog>,
+        element:<PrivateRoute><Updateblog></Updateblog></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`)
 
     },
@@ -52,12 +52,12 @@ const router = createBrowserRouter([
   },
   {
     path:'/wishlist',
-    element:<Wishlist></Wishlist>,
+    element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>,
     loader:()=>fetch('http://localhost:5000/wishlist')
 },
 {
   path:'/blogdetails/:id',
-  element:<Blogdetails></Blogdetails>,
+  element:<PrivateRoute><Blogdetails></Blogdetails></PrivateRoute>,
   loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`)
 },
 
