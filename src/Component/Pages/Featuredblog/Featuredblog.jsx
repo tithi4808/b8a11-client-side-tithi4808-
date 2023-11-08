@@ -35,6 +35,7 @@ const Featuredblog = () => {
          options: {
           filter: true,
           sort: true,
+          responsive: "all",
          }
         },
         {
@@ -43,6 +44,7 @@ const Featuredblog = () => {
          options: {
           filter: true,
           sort: false,
+          responsive: "all",
          }
         },
         {
@@ -51,6 +53,7 @@ const Featuredblog = () => {
          options: {
           filter: true,
           sort: false,
+          responsive: "all",
           customBodyRender: (value) => {
             return <img src={value} alt="Blog Owner" style={{ width: '50px', height: '50px' }} />;
           },
@@ -61,7 +64,8 @@ const Featuredblog = () => {
 
 
        const options = {
-        serial: 1
+        responsive: "standard",
+        selectableRows: "none"
         };
         
     const getTableDataWithSerial = () => {
