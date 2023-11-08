@@ -29,11 +29,11 @@ const Newsletter = () => {
                 <p className='mt-4 text-black text-sm font-normal'>Join 10,000 plus subscribers. Get updates about the best books to read, special content online! </p>
             </div>
                 <div className='flex gap-10 justify-center items-center py-4'>
-                    <input ref={firstNameRef} className='border-2 w-1/3' name='firstname' placeholder='First Name' type="text" />
-                    <input ref={lastNameRef} placeholder='Last Name' className='border-2 w-1/3' name='lastname' type="text" />
+                    <input required ref={firstNameRef} className='border-2 w-1/3' name='firstname' placeholder='First Name' type="text" />
+                    <input required ref={lastNameRef} placeholder='Last Name' className='border-2 w-1/3' name='lastname' type="text" />
                 </div>
                 <div className='flex justify-center'>
-                <input ref={emailRef} placeholder='Email' className='border-2 w-2/3 mb-4 ' type="email" name="email" id="" /></div> <br />
+                <input required ref={emailRef} placeholder='Email' className='border-2 w-2/3 mb-4 ' type="email" name="email" id="" /></div> <br />
                <div className='flex justify-center'> <input className='border-2 mb-4 px-4 py-2 rounded bg-red-400 text-white'  type="submit" value="Submit" /></div>
             </form>
             <ToastContainer />

@@ -9,6 +9,8 @@ const RecentBlogs = () => {
         .then(data=>setblogs(data))
     },[])
 
+   
+
     
     return (
        <div className='mt-20'>

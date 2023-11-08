@@ -9,8 +9,8 @@ const Recommend = ({blog}) => {
                 <img src={image} alt="" />
             </div>
             <div>
-                <h1 className='mb-2'>{title}</h1>
-                <p className='mb-2'><span className=' '>Published</span>: {published_date}</p>
+                <h1 className='mb-2 font-bold text-center'>{title}</h1>
+                <p className='mb-2 text-center'><span className=' '>Published</span>: {published_date}</p>
             </div>
             
         </div>

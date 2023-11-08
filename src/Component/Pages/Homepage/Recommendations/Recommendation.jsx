@@ -17,7 +17,7 @@ const Recommendation = () => {
            
         </div>
          <div>
-            {blogs.slice(0,3).map(blog=><Recommend key={blog._id} blog={blog}></Recommend>)}
+            {blogs.slice(4,7).map(blog=><Recommend key={blog._id} blog={blog}></Recommend>)}
         </div>
        </div>
     );

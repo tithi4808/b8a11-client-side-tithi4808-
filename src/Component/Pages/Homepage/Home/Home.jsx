@@ -10,9 +10,9 @@ const Home = () => {
         <div>
 
             <Banner></Banner>
-            <div className='flex max-w-6xl gap-10 mx-auto'>
-                <RecentBlogs className='w-2/3'></RecentBlogs>
-                <div  className='w-1/3'>
+            <div className='md:flex max-w-6xl gap-10 mx-auto'>
+                <RecentBlogs className='md:w-2/3'></RecentBlogs>
+                <div  className='md:w-1/3'>
                 <Recommendation></Recommendation>
                 <Support></Support>
                 </div>
