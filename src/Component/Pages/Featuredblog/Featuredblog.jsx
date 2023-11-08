@@ -1,8 +1,11 @@
 import MUIDataTable from "mui-datatables";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Featuredblog = () => {
+
+    const navigate=useNavigate()
 
 
     const [featureddata,setfeatureddata]=useState([])
@@ -14,6 +17,8 @@ const Featuredblog = () => {
             setfeatureddata(featureblog)
         })
     },[])
+
+   
 
 
     console.log(featureddata)

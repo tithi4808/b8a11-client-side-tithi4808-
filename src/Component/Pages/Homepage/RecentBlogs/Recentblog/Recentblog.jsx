@@ -14,24 +14,24 @@ const Recentblog = ({blog}) => {
            
     }
     const handlewish=()=>{
-    //     const blogs={_id,title,image,short_description,category,published_date}
-    //     fetch('http://localhost:5000/wishlist',{
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         // 'Content-Type': 'application/x-www-form-urlencoded',
-    //       },
-    //       body: JSON.stringify(blogs),
-    // })
-    // .then(res=>res.json())
-    // .then(data=>{
-    //     if(data.acknowledged)
-    //     {
-    //         toast('Successfully added the wishlist')
-    //     }
-    // })
+        const blogs={title,image,Shortdescription,category,published_date}
+        fetch('http://localhost:5000/wishlist',{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: JSON.stringify(blogs),
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        if(data.acknowledged)
+        {
+            toast('Successfully added the wishlist')
+        }
+     })
     }
-    
+
     
     return (
         <div className='border-2 rounded-lg lg:flex gap-8 px-4 py-8'>

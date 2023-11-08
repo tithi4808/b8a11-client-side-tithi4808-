@@ -17,6 +17,8 @@ const Allblog = ({blog}) => {
 }
 
 const handlewishlist=()=>{
+
+    const blogs={title,image,short_description,category,published_date}
     
     fetch('http://localhost:5000/wishlist',{
         method: "POST",
@@ -24,7 +26,7 @@ const handlewishlist=()=>{
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify(blog),
+          body: JSON.stringify(blogs),
     })
     .then(res=>res.json())
     .then(data=>{
