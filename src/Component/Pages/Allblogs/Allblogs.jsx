@@ -31,7 +31,7 @@ const Allblogs = () => {
                 <div className='mt-6 text-center space-y-2'>
                 <h2 className='pt-6 mb-4 text-center text-2xl text-red-500'>Search by category</h2><hr />
                 <p>Fiction</p><hr />
-                <p>Science-Fiction</p><hr />
+                <p>Non-Fiction</p><hr />
                 <p></p><hr />
                 <p></p><hr />
                 <p></p><hr />
