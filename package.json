@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/styled-engine": "^5.14.17",
+    "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
     "firebase": "^10.5.2",
     "framer-motion": "^10.16.4",
     "ka-table": "^8.4.0",

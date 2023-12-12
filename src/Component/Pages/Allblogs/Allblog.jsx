@@ -24,7 +24,7 @@ const handlewishlist=()=>{
 
     const blogs={title,image,short_description,category,published_date,email}
     
-    fetch('https://b8a11-server-side-tithi4808-4wuh4agec-tanya-sultanas-projects.vercel.app/wishlist',{
+    fetch('http://localhost:5000/wishlist',{
         method: "POST",
         headers: {
             "Content-Type": "application/json",

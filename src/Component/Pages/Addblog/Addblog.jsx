@@ -41,7 +41,7 @@ const Addblog = () =>{
 
     
     
-    fetch('https://b8a11-server-side-tithi4808-4wuh4agec-tanya-sultanas-projects.vercel.app/allblogs',{
+    fetch('http://localhost:5000/allblogs',{
         method: "POST",
         headers: {
             "Content-Type": "application/json",

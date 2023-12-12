@@ -4,6 +4,11 @@ import RecentBlogs from '../RecentBlogs/RecentBlogs';
 import Recommendation from '../Recommendations/Recommendation';
 import Newsletter from '../Newsletter/Newsletter';
 import Support from '../Support/Support';
+import Contactus from '../../Wishlist/contactus/Contactus';
+import Author from '../../Wishlist/contactus/Author\'s/Author\'s';
+
+
+
 
 const Home = () => {
     return (
@@ -17,7 +22,10 @@ const Home = () => {
                 <Support></Support>
                 </div>
             </div>
+            <Author></Author>
             <Newsletter></Newsletter>
+            <Contactus></Contactus>
+            
             
         </div>
     );

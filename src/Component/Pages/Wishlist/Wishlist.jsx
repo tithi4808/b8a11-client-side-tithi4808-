@@ -9,6 +9,7 @@ const Wishlist = () => {
      const blog=useLoaderData()
     const navigate=useNavigate()
      console.log(blog)
+     
     
 
      const {User}=useContext(AuthContext)
